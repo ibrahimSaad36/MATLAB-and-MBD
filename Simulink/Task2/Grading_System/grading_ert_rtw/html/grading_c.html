@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - grading.c</title>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" language="JavaScript" src="slwebview.js"></SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript" src="id_mapping.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('grading_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../grading.c" target="rtwreport_document_frame" id="linkToText_plain">grading.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: grading.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'grading'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.3</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.13 (R2017b) 24-Jul-2017</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * C/C++ source code generated on : Sun Jan 29 16:38:37 2023</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Embedded hardware selection: Intel-&gt;x86-64 (Windows64)</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Code generation objectives:</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> *    1. Execution efficiency</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> *    2. RAM efficiency</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> *    3. ROM efficiency</span>
+</span><span><a class="LN" name="16">   16   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="17">   17   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="18">   18   </a>
+</span><span><a class="LN" name="19">   19   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;grading.h&quot;</font>
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;grading_private.h&quot;</font>
+</span><span><a class="LN" name="21">   21   </a>
+</span><span><a class="LN" name="22">   22   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="23">   23   </a><a href="grading_h.html#type_ExtU_grading_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExtU_grading_T');" target="_self"><font color="#1122aa">ExtU_grading_T</font></a> <a name="var_grading_U">grading_U</a>;
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="26">   26   </a><a href="grading_h.html#type_ExtY_grading_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExtY_grading_T');" target="_self"><font color="#1122aa">ExtY_grading_T</font></a> <a name="var_grading_Y">grading_Y</a>;
+</span><span><a class="LN" name="27">   27   </a>
+</span><span><a class="LN" name="28">   28   </a><span class="CT">/* Real-time model */</span>
+</span><span><a class="LN" name="29">   29   </a><a href="grading_types_h.html#type_RT_MODEL_grading_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_grading_T');" target="_self"><font color="#1122aa">RT_MODEL_grading_T</font></a> <a name="var_grading_M_">grading_M_</a>;
+</span><span><a class="LN" name="30">   30   </a><a href="grading_types_h.html#type_RT_MODEL_grading_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_grading_T');" target="_self"><font color="#1122aa">RT_MODEL_grading_T</font></a> *<span class="DT">const</span> <a name="var_grading_M">grading_M</a> = &amp;<a href="#var_grading_M_" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_M_');" target="_self"><font color="#1122aa">grading_M_</font></a>;
+</span><span><a class="LN" name="31">   31   </a>
+</span><span><a class="LN" name="32">   32   </a><span class="CT">/* Model step function */</span>
+</span><span><a class="LN" name="33">   33   </a><span class="DT">void</span> <a name="fcn_grading_step">grading_step</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="34">   34   </a><b>{</b>
+</span><span><a class="LN" name="35">   35   </a>  <span class="CT">/* If: '<a href="matlab:coder.internal.code2model('grading:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="36">   36   </a><span class="CT">   *  Inport: '<a href="matlab:coder.internal.code2model('grading:26')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="37">   37   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="38">   38   </a>  <span class="KW">if</span> (<a href="#var_grading_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_U');" target="_self"><font color="#1122aa">grading_U</font></a>.In1 &gt;= 85.0) <b>{</b>
+</span><span><a class="LN" name="39">   39   </a>    <span class="CT">/* Outputs for IfAction SubSystem: '<a href="matlab:coder.internal.code2model('grading:18')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem4</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="40">   40   </a><span class="CT">     *  ActionPort: '<a href="matlab:coder.internal.code2model('grading:20')" name="code2model"><font color="#117755"><i>&lt;S5&gt;/Action Port</i></font></a>'</span>
+</span><span><a class="LN" name="41">   41   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="42">   42   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('grading:27')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="43">   43   </a><span class="CT">     *  Constant: '<a href="matlab:coder.internal.code2model('grading:29')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Constant</i></font></a>'</span>
+</span><span><a class="LN" name="44">   44   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('grading:19')" name="code2model"><font color="#117755"><i>&lt;S5&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="45">   45   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="46">   46   </a>    <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 5.0;
+</span><span><a class="LN" name="47">   47   </a>
+</span><span><a class="LN" name="48">   48   </a>    <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('grading:18')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem4</i></font></a>' */</span>
+</span><span><a class="LN" name="49">   49   </a>  <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_grading_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_U');" target="_self"><font color="#1122aa">grading_U</font></a>.In1 &gt;= 75.0) <b>{</b>
+</span><span><a class="LN" name="50">   50   </a>    <span class="CT">/* Outputs for IfAction SubSystem: '<a href="matlab:coder.internal.code2model('grading:2')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="51">   51   </a><span class="CT">     *  ActionPort: '<a href="matlab:coder.internal.code2model('grading:4')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Action Port</i></font></a>'</span>
+</span><span><a class="LN" name="52">   52   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="53">   53   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('grading:27')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="54">   54   </a><span class="CT">     *  Constant: '<a href="matlab:coder.internal.code2model('grading:30')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Constant1</i></font></a>'</span>
+</span><span><a class="LN" name="55">   55   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('grading:3')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="56">   56   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="57">   57   </a>    <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 4.0;
+</span><span><a class="LN" name="58">   58   </a>
+</span><span><a class="LN" name="59">   59   </a>    <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('grading:2')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem</i></font></a>' */</span>
+</span><span><a class="LN" name="60">   60   </a>  <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_grading_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_U');" target="_self"><font color="#1122aa">grading_U</font></a>.In1 &gt;= 65.0) <b>{</b>
+</span><span><a class="LN" name="61">   61   </a>    <span class="CT">/* Outputs for IfAction SubSystem: '<a href="matlab:coder.internal.code2model('grading:6')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="62">   62   </a><span class="CT">     *  ActionPort: '<a href="matlab:coder.internal.code2model('grading:8')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Action Port</i></font></a>'</span>
+</span><span><a class="LN" name="63">   63   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="64">   64   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('grading:27')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="65">   65   </a><span class="CT">     *  Constant: '<a href="matlab:coder.internal.code2model('grading:31')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Constant2</i></font></a>'</span>
+</span><span><a class="LN" name="66">   66   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('grading:7')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="67">   67   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="68">   68   </a>    <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 3.0;
+</span><span><a class="LN" name="69">   69   </a>
+</span><span><a class="LN" name="70">   70   </a>    <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('grading:6')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem1</i></font></a>' */</span>
+</span><span><a class="LN" name="71">   71   </a>  <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_grading_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_U');" target="_self"><font color="#1122aa">grading_U</font></a>.In1 &gt;= 50.0) <b>{</b>
+</span><span><a class="LN" name="72">   72   </a>    <span class="CT">/* Outputs for IfAction SubSystem: '<a href="matlab:coder.internal.code2model('grading:10')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem2</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="73">   73   </a><span class="CT">     *  ActionPort: '<a href="matlab:coder.internal.code2model('grading:12')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Action Port</i></font></a>'</span>
+</span><span><a class="LN" name="74">   74   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="75">   75   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('grading:27')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="76">   76   </a><span class="CT">     *  Constant: '<a href="matlab:coder.internal.code2model('grading:32')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Constant3</i></font></a>'</span>
+</span><span><a class="LN" name="77">   77   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('grading:11')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="78">   78   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="79">   79   </a>    <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 2.0;
+</span><span><a class="LN" name="80">   80   </a>
+</span><span><a class="LN" name="81">   81   </a>    <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('grading:10')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem2</i></font></a>' */</span>
+</span><span><a class="LN" name="82">   82   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="83">   83   </a>    <span class="CT">/* Outputs for IfAction SubSystem: '<a href="matlab:coder.internal.code2model('grading:14')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem3</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="84">   84   </a><span class="CT">     *  ActionPort: '<a href="matlab:coder.internal.code2model('grading:16')" name="code2model"><font color="#117755"><i>&lt;S4&gt;/Action Port</i></font></a>'</span>
+</span><span><a class="LN" name="85">   85   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="86">   86   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('grading:27')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="87">   87   </a><span class="CT">     *  Constant: '<a href="matlab:coder.internal.code2model('grading:33')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Constant4</i></font></a>'</span>
+</span><span><a class="LN" name="88">   88   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('grading:15')" name="code2model"><font color="#117755"><i>&lt;S4&gt;/In1</i></font></a>'</span>
+</span><span><a class="LN" name="89">   89   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="90">   90   </a>    <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 1.0;
+</span><span><a class="LN" name="91">   91   </a>
+</span><span><a class="LN" name="92">   92   </a>    <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('grading:14')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If Action Subsystem3</i></font></a>' */</span>
+</span><span><a class="LN" name="93">   93   </a>  <b>}</b>
+</span><span><a class="LN" name="94">   94   </a>
+</span><span><a class="LN" name="95">   95   </a>  <span class="CT">/* End of If: '<a href="matlab:coder.internal.code2model('grading:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/If</i></font></a>' */</span>
+</span><span><a class="LN" name="96">   96   </a><b>}</b>
+</span><span><a class="LN" name="97">   97   </a>
+</span><span><a class="LN" name="98">   98   </a><span class="CT">/* Model initialize function */</span>
+</span><span><a class="LN" name="99">   99   </a><span class="DT">void</span> <a name="fcn_grading_initialize">grading_initialize</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="100">  100   </a><b>{</b>
+</span><span><a class="LN" name="101">  101   </a>  <span class="CT">/* Registration code */</span>
+</span><span><a class="LN" name="102">  102   </a>
+</span><span><a class="LN" name="103">  103   </a>  <span class="CT">/* initialize error status */</span>
+</span><span><a class="LN" name="104">  104   </a>  rtmSetErrorStatus(<a href="#var_grading_M" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_M');" target="_self"><font color="#1122aa">grading_M</font></a>, (NULL));
+</span><span><a class="LN" name="105">  105   </a>
+</span><span><a class="LN" name="106">  106   </a>  <span class="CT">/* external inputs */</span>
+</span><span><a class="LN" name="107">  107   </a>  <a href="#var_grading_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_U');" target="_self"><font color="#1122aa">grading_U</font></a>.In1 = 0.0;
+</span><span><a class="LN" name="108">  108   </a>
+</span><span><a class="LN" name="109">  109   </a>  <span class="CT">/* external outputs */</span>
+</span><span><a class="LN" name="110">  110   </a>  <a href="#var_grading_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_grading_Y');" target="_self"><font color="#1122aa">grading_Y</font></a>.Out1 = 0.0;
+</span><span><a class="LN" name="111">  111   </a><b>}</b>
+</span><span><a class="LN" name="112">  112   </a>
+</span><span><a class="LN" name="113">  113   </a><span class="CT">/* Model terminate function */</span>
+</span><span><a class="LN" name="114">  114   </a><span class="DT">void</span> <a name="fcn_grading_terminate">grading_terminate</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="115">  115   </a><b>{</b>
+</span><span><a class="LN" name="116">  116   </a>  <span class="CT">/* (no terminate code required) */</span>
+</span><span><a class="LN" name="117">  117   </a><b>}</b>
+</span><span><a class="LN" name="118">  118   </a>
+</span><span><a class="LN" name="119">  119   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="120">  120   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="121">  121   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="122">  122   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="123">  123   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="124">  124   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

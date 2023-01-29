@@ -1,0 +1,34 @@
+function RTW_SidParentMap() {
+    this.sidParentMap = new Array();
+    this.sidParentMap["grading:26"] = "grading";
+    this.sidParentMap["grading:29"] = "grading";
+    this.sidParentMap["grading:30"] = "grading";
+    this.sidParentMap["grading:31"] = "grading";
+    this.sidParentMap["grading:32"] = "grading";
+    this.sidParentMap["grading:33"] = "grading";
+    this.sidParentMap["grading:1"] = "grading";
+    this.sidParentMap["grading:2"] = "grading";
+    this.sidParentMap["grading:6"] = "grading";
+    this.sidParentMap["grading:10"] = "grading";
+    this.sidParentMap["grading:14"] = "grading";
+    this.sidParentMap["grading:18"] = "grading";
+    this.sidParentMap["grading:22"] = "grading";
+    this.sidParentMap["grading:27"] = "grading";
+    this.sidParentMap["grading:3"] = "grading:2";
+    this.sidParentMap["grading:4"] = "grading:2";
+    this.sidParentMap["grading:5"] = "grading:2";
+    this.sidParentMap["grading:7"] = "grading:6";
+    this.sidParentMap["grading:8"] = "grading:6";
+    this.sidParentMap["grading:9"] = "grading:6";
+    this.sidParentMap["grading:11"] = "grading:10";
+    this.sidParentMap["grading:12"] = "grading:10";
+    this.sidParentMap["grading:13"] = "grading:10";
+    this.sidParentMap["grading:15"] = "grading:14";
+    this.sidParentMap["grading:16"] = "grading:14";
+    this.sidParentMap["grading:17"] = "grading:14";
+    this.sidParentMap["grading:19"] = "grading:18";
+    this.sidParentMap["grading:20"] = "grading:18";
+    this.sidParentMap["grading:21"] = "grading:18";
+    this.getParentSid = function(sid) { return this.sidParentMap[sid];}
+}
+    RTW_SidParentMap.instance = new RTW_SidParentMap();
