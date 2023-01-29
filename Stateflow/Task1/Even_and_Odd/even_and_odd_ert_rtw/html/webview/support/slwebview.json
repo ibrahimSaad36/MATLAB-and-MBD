@@ -1,0 +1,27 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"even_and_odd",
+   "name":"even_and_odd",
+   "fullname":"even_and_odd",
+   "label":"even_and_odd",
+   "parent":0,
+   "descendants":[
+    2,
+    3
+   ],
+   "hierarchyUrl":"support/slwebview_files/even_and_odd_h_1.json",
+   "backingUrl":"support/slwebview_files/even_and_odd_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/even_and_odd_icons.css"
+}
