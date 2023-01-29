@@ -1,0 +1,32 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"logic_operations_with_switch",
+   "name":"logic_operations_with_switch",
+   "fullname":"logic_operations_with_switch",
+   "label":"logic_operations_with_switch",
+   "parent":0,
+   "descendants":[
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "hierarchyUrl":"support/slwebview_files/logic_operations_with_switch_h_1.json",
+   "backingUrl":"support/slwebview_files/logic_operations_with_switch_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/logic_operations_with_switch_icons.css"
+}

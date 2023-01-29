@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"simple_logic_calculator",
+   "name":"simple_logic_calculator",
+   "fullname":"simple_logic_calculator",
+   "label":"simple_logic_calculator*",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/simple_logic_calculator_h_1.json",
+   "backingUrl":"support/slwebview_files/simple_logic_calculator_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/simple_logic_calculator_icons.css"
+}
