@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1">
+    <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="a36ebca2-46b1-41ef-8d10-cc1e6f1844da">
+        <dataDictionary/>
+        <dataTransferInfos>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAAAAAABAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAA</dataTransferInfos>
+        <hasInlineVariantBlock>false</hasInlineVariantBlock>
+        <hasMachineDataAccess>false</hasMachineDataAccess>
+        <hasSigObjWithICDrivingRootOutport>false</hasSigObjWithICDrivingRootOutport>
+        <inports type="ModelRefInfoRepo.InportInformation" uuid="5674fbdf-a129-4e8e-a67e-444d3652cb8b">
+            <EMVCE/>
+            <originalPortNumber>0</originalPortNumber>
+        </inports>
+        <inports type="ModelRefInfoRepo.InportInformation" uuid="5d69997e-3e61-4747-9a45-16ee4d15b18a">
+            <EMVCE/>
+            <originalPortNumber>1</originalPortNumber>
+        </inports>
+        <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+        <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+        <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+        <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+        <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+        <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+        <needElapsedTime>false</needElapsedTime>
+        <outports type="ModelRefInfoRepo.OutportInformation" uuid="9ae4e2ba-06ae-491c-91d0-04b73032221a">
+            <EMVCE/>
+            <originalPortNumber>0</originalPortNumber>
+        </outports>
+        <outports type="ModelRefInfoRepo.OutportInformation" uuid="fb9bfc2e-e438-41fb-acec-0eb84a07c00c">
+            <EMVCE/>
+            <originalPortNumber>1</originalPortNumber>
+        </outports>
+        <outports type="ModelRefInfoRepo.OutportInformation" uuid="86a26a25-c644-4ffc-a272-6ff5d0784066">
+            <EMVCE/>
+            <originalPortNumber>2</originalPortNumber>
+        </outports>
+        <outports type="ModelRefInfoRepo.OutportInformation" uuid="6d5d52ed-6c04-4acd-84eb-481e82b5813d">
+            <EMVCE/>
+            <originalPortNumber>3</originalPortNumber>
+        </outports>
+        <userSpecifiedFixedStepSize>0</userSpecifiedFixedStepSize>
+        <zeroInternalMemoryAtStartupUnchecked>false</zeroInternalMemoryAtStartupUnchecked>
+        <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="eeb04741-41d0-4e18-8777-5ce51b914e54"/>
+        <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="672ca5e1-51ac-465c-8727-ec1746c4ff49">
+            <hasHiddenDeterministicRTB>false</hasHiddenDeterministicRTB>
+        </periodicEventPortUnsupportedBlockInfo>
+        <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="3e127c1e-da55-43d9-ba77-52106f486007">
+            <compSimulinkFunctionCatalog>AAFJTQAAAAAOAAAAgAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAFAAQADgAAAAEAAAAOAAAAQ29tcEZ1bmN0aW9ucwAAAA4AAAAwAAAABgAAAAgAAAAGAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAAAkAAAAAAAAA</compSimulinkFunctionCatalog>
+            <postPropHasAnyExportedFunction>false</postPropHasAnyExportedFunction>
+            <postPropHasAnyVariantExportedFunction>false</postPropHasAnyVariantExportedFunction>
+        </simulinkFunctions>
+    </ModelRefInfoRepo.ModelRefInfoRoot>
+</MF0>

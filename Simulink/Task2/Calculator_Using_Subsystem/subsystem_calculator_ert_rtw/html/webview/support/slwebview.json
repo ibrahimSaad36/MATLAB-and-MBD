@@ -1,0 +1,26 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"subsystem_calculator",
+   "name":"subsystem_calculator",
+   "fullname":"subsystem_calculator",
+   "label":"subsystem_calculator",
+   "parent":0,
+   "descendants":[
+    2
+   ],
+   "hierarchyUrl":"support/slwebview_files/subsystem_calculator_h_1.json",
+   "backingUrl":"support/slwebview_files/subsystem_calculator_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/subsystem_calculator_icons.css"
+}
