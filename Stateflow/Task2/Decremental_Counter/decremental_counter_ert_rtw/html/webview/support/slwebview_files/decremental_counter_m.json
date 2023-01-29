@@ -1,0 +1,39 @@
+[
+ {
+  "sid":"decremental_counter",
+  "className":"Simulink.BlockDiagram",
+  "icon":"WebViewIcon0",
+  "name":"decremental_counter",
+  "label":"decremental_counter",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.4",
+    "Sun Jan 29 19:53:26 2023",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]
