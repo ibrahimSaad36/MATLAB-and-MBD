@@ -1,0 +1,26 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"factorial_while_loop",
+   "name":"factorial_while_loop",
+   "fullname":"factorial_while_loop",
+   "label":"factorial_while_loop*",
+   "parent":0,
+   "descendants":[
+    2
+   ],
+   "hierarchyUrl":"support/slwebview_files/factorial_while_loop_h_1.json",
+   "backingUrl":"support/slwebview_files/factorial_while_loop_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/factorial_while_loop_icons.css"
+}

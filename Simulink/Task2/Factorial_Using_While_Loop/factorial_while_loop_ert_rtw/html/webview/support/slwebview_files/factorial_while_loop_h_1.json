@@ -1,0 +1,55 @@
+[
+ {
+  "hid":1,
+  "sid":"factorial_while_loop",
+  "esid":"",
+  "parent":0,
+  "children":[
+   2
+  ],
+  "name":"factorial_while_loop",
+  "fullname":"factorial_while_loop",
+  "label":"factorial_while_loop",
+  "icon":"WebViewIcon0",
+  "svg":"support/slwebview_files/factorial_while_loop_d.svg",
+  "thumbnail":"support/slwebview_files/factorial_while_loop_d.png",
+  "backingUrl":"support/slwebview_files/factorial_while_loop_d.json",
+  "elements":[
+   ":14",
+   ":33",
+   ":34",
+   ":33#out:1",
+   ":14#out:1"
+  ],
+  "sameAsElement":false
+ },
+ {
+  "hid":2,
+  "sid":"factorial_while_loop:14",
+  "esid":"factorial_while_loop:14",
+  "parent":1,
+  "children":[
+  ],
+  "name":"While Iterator Subsystem",
+  "fullname":"factorial_while_loop/While Iterator Subsystem",
+  "label":"While Iterator Subsystem",
+  "icon":"WebViewIcon1",
+  "svg":"support/slwebview_files/factorial_while_loop_14_d.svg",
+  "thumbnail":"support/slwebview_files/factorial_while_loop_14_d.png",
+  "backingUrl":"support/slwebview_files/factorial_while_loop_14_d.json",
+  "elements":[
+   ":18",
+   ":17",
+   ":16",
+   ":21",
+   ":27",
+   ":28",
+   ":16#out:1",
+   ":21#out:1",
+   ":27#out:1",
+   ":17#out:1",
+   ":28#out:1"
+  ],
+  "sameAsElement":true
+ }
+]
