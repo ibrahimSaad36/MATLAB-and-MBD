@@ -1,0 +1,77 @@
+[
+ {
+  "hid":1,
+  "sid":"triggered_system",
+  "esid":"",
+  "parent":0,
+  "children":[
+   2
+  ],
+  "name":"triggered_system",
+  "fullname":"triggered_system",
+  "label":"triggered_system",
+  "icon":"WebViewIcon0",
+  "svg":"support/slwebview_files/triggered_system_d.svg",
+  "thumbnail":"support/slwebview_files/triggered_system_d.png",
+  "backingUrl":"support/slwebview_files/triggered_system_d.json",
+  "elements":[
+   ":1",
+   ":6",
+   ":7",
+   ":8",
+   ":6#out:1",
+   ":1#out:1",
+   ":8#out:1"
+  ],
+  "sameAsElement":false
+ },
+ {
+  "hid":2,
+  "sid":"triggered_system:1",
+  "esid":"triggered_system:1",
+  "parent":1,
+  "children":[
+   3
+  ],
+  "name":"Triggered Subsystem",
+  "fullname":"triggered_system/Triggered Subsystem",
+  "label":"Triggered Subsystem",
+  "icon":"WebViewIcon1",
+  "svg":"support/slwebview_files/triggered_system_1_d.svg",
+  "thumbnail":"support/slwebview_files/triggered_system_1_d.png",
+  "backingUrl":"support/slwebview_files/triggered_system_1_d.json",
+  "elements":[
+   ":4",
+   ":3",
+   ":2",
+   ":5",
+   ":2#out:1",
+   ":5#out:1"
+  ],
+  "sameAsElement":true
+ },
+ {
+  "hid":3,
+  "sid":"triggered_system:5",
+  "esid":"triggered_system:5",
+  "parent":2,
+  "children":[
+  ],
+  "name":"Chart",
+  "fullname":"triggered_system/Triggered Subsystem/Chart",
+  "label":"Chart",
+  "icon":"WebViewIcon4",
+  "svg":"support/slwebview_files/triggered_system_5_d.svg",
+  "thumbnail":"support/slwebview_files/triggered_system_5_d.png",
+  "backingUrl":"support/slwebview_files/triggered_system_5_d.json",
+  "elements":[
+   ":5:8",
+   ":5:7",
+   ":5:5",
+   ":5:3",
+   ":5:4",
+   ":5:6"
+  ],
+  "sameAsElement":false
+ }
+]
