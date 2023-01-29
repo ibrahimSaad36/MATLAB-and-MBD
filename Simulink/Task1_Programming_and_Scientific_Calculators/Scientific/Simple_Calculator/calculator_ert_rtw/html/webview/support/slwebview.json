@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"calculator",
+   "name":"calculator",
+   "fullname":"calculator",
+   "label":"calculator",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/calculator_h_1.json",
+   "backingUrl":"support/slwebview_files/calculator_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/calculator_icons.css"
+}

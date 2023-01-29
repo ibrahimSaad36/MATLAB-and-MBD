@@ -1,0 +1,29 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"calculator_using_switch",
+   "name":"calculator_using_switch",
+   "fullname":"calculator_using_switch",
+   "label":"calculator_using_switch",
+   "parent":0,
+   "descendants":[
+    2,
+    3,
+    4,
+    5
+   ],
+   "hierarchyUrl":"support/slwebview_files/calculator_using_switch_h_1.json",
+   "backingUrl":"support/slwebview_files/calculator_using_switch_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/calculator_using_switch_icons.css"
+}

@@ -1,0 +1,35 @@
+function RTW_SidParentMap() {
+    this.sidParentMap = new Array();
+    this.sidParentMap["calculator_using_switch:6"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:21"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:22"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:8"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:1"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:2"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:9"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:13"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:17"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:7"] = "calculator_using_switch";
+    this.sidParentMap["calculator_using_switch:3"] = "calculator_using_switch:2";
+    this.sidParentMap["calculator_using_switch:23"] = "calculator_using_switch:2";
+    this.sidParentMap["calculator_using_switch:4"] = "calculator_using_switch:2";
+    this.sidParentMap["calculator_using_switch:27"] = "calculator_using_switch:2";
+    this.sidParentMap["calculator_using_switch:5"] = "calculator_using_switch:2";
+    this.sidParentMap["calculator_using_switch:10"] = "calculator_using_switch:9";
+    this.sidParentMap["calculator_using_switch:24"] = "calculator_using_switch:9";
+    this.sidParentMap["calculator_using_switch:11"] = "calculator_using_switch:9";
+    this.sidParentMap["calculator_using_switch:28"] = "calculator_using_switch:9";
+    this.sidParentMap["calculator_using_switch:12"] = "calculator_using_switch:9";
+    this.sidParentMap["calculator_using_switch:14"] = "calculator_using_switch:13";
+    this.sidParentMap["calculator_using_switch:25"] = "calculator_using_switch:13";
+    this.sidParentMap["calculator_using_switch:15"] = "calculator_using_switch:13";
+    this.sidParentMap["calculator_using_switch:29"] = "calculator_using_switch:13";
+    this.sidParentMap["calculator_using_switch:16"] = "calculator_using_switch:13";
+    this.sidParentMap["calculator_using_switch:18"] = "calculator_using_switch:17";
+    this.sidParentMap["calculator_using_switch:26"] = "calculator_using_switch:17";
+    this.sidParentMap["calculator_using_switch:19"] = "calculator_using_switch:17";
+    this.sidParentMap["calculator_using_switch:30"] = "calculator_using_switch:17";
+    this.sidParentMap["calculator_using_switch:20"] = "calculator_using_switch:17";
+    this.getParentSid = function(sid) { return this.sidParentMap[sid];}
+}
+    RTW_SidParentMap.instance = new RTW_SidParentMap();
