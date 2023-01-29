@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"incremental_counter",
+   "name":"incremental_counter",
+   "fullname":"incremental_counter",
+   "label":"incremental_counter*",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/incremental_counter_h_1.json",
+   "backingUrl":"support/slwebview_files/incremental_counter_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/incremental_counter_icons.css"
+}
