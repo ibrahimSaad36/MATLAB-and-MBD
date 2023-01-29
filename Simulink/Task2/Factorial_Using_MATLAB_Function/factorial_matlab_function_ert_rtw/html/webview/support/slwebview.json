@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"factorial_matlab_function",
+   "name":"factorial_matlab_function",
+   "fullname":"factorial_matlab_function",
+   "label":"factorial_matlab_function*",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/factorial_matlab_function_h_1.json",
+   "backingUrl":"support/slwebview_files/factorial_matlab_function_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/factorial_matlab_function_icons.css"
+}
